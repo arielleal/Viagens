@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import br.com.alura.aluraviagens.model.Pacote;
-
 public class PacoteDAO {
 
     public List<Pacote> lista() {

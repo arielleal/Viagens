@@ -1,4 +1,4 @@
-package br.com.alura.aluraviagens.model;
+package leal.cursoandroid.com.ui;
 
 import java.math.BigDecimal;
 
