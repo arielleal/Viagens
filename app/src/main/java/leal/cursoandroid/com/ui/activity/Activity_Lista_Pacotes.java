@@ -6,6 +6,7 @@ import leal.cursoandroid.com.ui.PacoteDAO;
 import leal.cursoandroid.com.ui.adapter.ListaPacotesAdapter;
 import leal.cursoandroid.com.viagens.R;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
@@ -23,6 +24,9 @@ public class Activity_Lista_Pacotes extends AppCompatActivity {
         setTitle(TITULO_APP_BAR);
 
         configuraLista();
+
+        Intent intent = new Intent(this, ResumoPacoteActivity.class);
+        startActivity(intent);
     }
 
     private void configuraLista() {

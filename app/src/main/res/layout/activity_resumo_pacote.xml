@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="leal.cursoandroid.com.ui.activity.ResumoPacoteActivity">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/baner_resumo"
         android:layout_width="0dp"
         android:layout_height="140dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/sao_paulo_sp"
+        tools:src="@drawable/sao_paulo_sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/todo" />
 
     <TextView
-        android:id="@+id/texto_resumo_cidade"
+        android:id="@+id/texto_resumo_local"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -37,47 +37,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/dias_resumo"
+        tools:text="@string/dias_resumo"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/texto_resumo_cidade"
-        app:layout_constraintTop_toBottomOf="@+id/texto_resumo_cidade" />
+        app:layout_constraintStart_toStartOf="@+id/texto_resumo_local"
+        app:layout_constraintTop_toBottomOf="@+id/texto_resumo_local" />
 
     <TextView
         android:id="@+id/texto_resumo_periodo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="08/12 - 10/12 de 2020"
+        app:layout_constraintEnd_toStartOf="@id/texto_resumo_valor"
         app:layout_constraintStart_toStartOf="@+id/texto_resumo_dias"
-        app:layout_constraintTop_toBottomOf="@+id/texto_resumo_dias" />
+        app:layout_constraintTop_toBottomOf="@+id/texto_resumo_dias"
+        tools:text="08/12 - 10/12 de 2020" />
 
     <TextView
         android:id="@+id/texto_resumo_valor"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="8dp"
-        android:text="R$ 243,99"
+        android:textAllCaps="false"
         android:textColor="@android:color/holo_green_dark"
+        android:textIsSelectable="false"
         android:textSize="20sp"
+        android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="@+id/texto_resumo_periodo"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/texto_resumo_periodo"
+        tools:text="R$ 243,99"
+        android:gravity="end"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/texto_resumo_preco_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Preço final:"
+        android:text="@string/preco_final"
         app:layout_constraintBottom_toTopOf="@+id/texto_resumo_valor"
         app:layout_constraintEnd_toEndOf="@+id/texto_resumo_valor" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/resumo_botao_pagamento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:background="@drawable/botao_redondo_laranja"
-        android:text="Realizar Pagamento"
+        android:text="@string/nome_botao_resumo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
