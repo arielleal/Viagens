@@ -1,4 +1,4 @@
-package leal.cursoandroid.com.ui.viagens;
+package leal.cursoandroid.com.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import leal.cursoandroid.com.ui.Pacote;
